@@ -1,0 +1,25 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl Material.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Gabriel\\AppData\\Local\\Temp\\gltfimg-gla_eovs\\Sem_título.png
+
+newmtl poly_0.002
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Gabriel\\AppData\\Local\\Temp\\gltfimg-v2q48p9d\\Untitled.png
+map_Kd C:\\Users\\Gabriel\\AppData\\Local\\Temp\\gltfimg-6yi07mg6\\poly_0_zdrpYcTq.jpg
