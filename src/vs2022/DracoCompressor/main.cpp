@@ -16,6 +16,8 @@
 #include "imgui_impl_sdl.h"
 #include "imgui_impl_sdlrenderer.h"
 
+#include <raylib/raylib.h>
+
 enum struct EncodeResultType { Ok, FileReadErr, MeshEncodeErr, FileWriteErr };
 
 struct EncodeResult {
@@ -103,8 +105,11 @@ int main(int argc, char **argv) {
 	ImGui_ImplSDL2_InitForSDLRenderer(window, renderer);
 	ImGui_ImplSDLRenderer_Init(renderer);
 
+	//raylib
+	InitWindow(800, 800, "raylib [3d viewer]");
+
 	bool done = false;
-	while (!done) {
+	while (!done && !WindowShouldClose()) {
 		SDL_Event e;
 		while (SDL_PollEvent(&e)) {
 			ImGui_ImplSDL2_ProcessEvent(&e);
@@ -123,6 +128,12 @@ int main(int argc, char **argv) {
 		bool show = true;
 		ImGui::ShowDemoWindow(&show);
 
+		//raylib
+		BeginDrawing();
+		ClearBackground(RAYWHITE);
+		DrawText("HELLLLO", 20, 20, 10, BLACK);
+		EndDrawing();
+
 		ImGui::Render();
 		SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0xff, 0xff);
 		SDL_RenderClear(renderer);
@@ -137,6 +148,8 @@ int main(int argc, char **argv) {
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+
+	CloseWindow();
 
 	return 0;
 }
